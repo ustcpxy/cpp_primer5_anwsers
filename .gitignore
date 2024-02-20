@@ -1,0 +1,15 @@
+# Compiled Object files
+*.o
+
+# Precompiled Headers
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.a
+
+# Executables
+*.out
+
