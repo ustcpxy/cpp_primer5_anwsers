@@ -20,7 +20,7 @@ exit是C库函数，直接调用_exit系统调用
 这个操作也决定了进程退出码的取值范围是0~255，C库函数strerror可以将错误码转换成可读的字符串。
 > The value status & 0xFF is returned to the parent process as the process's exit status
 
-> 参考：https://www.man7.org/linux/man-pages/man2/exit.2.html
+参考：https://www.man7.org/linux/man-pages/man2/exit.2.html
 
 
 因为 -1 & 0xFF的结果是255，且bash进程将子进程的退出码存放在$?变量中，所以echo $?的结果是255
