@@ -1,4 +1,8 @@
 ## 练习1.1
+GCC编译器参考: http://labor-liber.org/en/gnu-linux/development/index.php?diapo=extensions
+
+目前主流项目使用.cpp或.cc作为源码后缀，.hpp作为头文件后缀。
+编译器其实不在意后缀，反而是其他一些IDE工具会根据后缀来识别文件做相应的语法高亮等处理。
 
 ## 练习1.2
 在我的系统返回的错误标识是255。为啥？
@@ -24,3 +28,19 @@ exit是C库函数，直接调用_exit系统调用
 
 
 因为 -1 & 0xFF的结果是255，且bash进程将子进程的退出码存放在$?变量中，所以echo $?的结果是255
+
+## 练习 1.3
+
+	``` c++
+	#include <iostream>
+
+	int main()
+	{
+	std::cout << "Hello, World" << std::endl;
+	return 0;
+	}
+	```
+
+
+
+## 练习 1.4
