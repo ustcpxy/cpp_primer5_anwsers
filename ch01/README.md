@@ -31,15 +31,16 @@ exit是C库函数，直接调用_exit系统调用
 
 ## 练习 1.3
 
-	``` c++
-	#include <iostream>
+``` c++
+#include <iostream>
 
-	int main()
-	{
-	std::cout << "Hello, World" << std::endl;
-	return 0;
-	}
-	```
+int main()
+{
+    std:cout << "Hello, World" << std::endl;
+    
+    return 0;
+}
+```
 
 
 
