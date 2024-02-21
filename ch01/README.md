@@ -66,14 +66,20 @@ int main()
 程序不合法，第一行的分号导致后面的 “<<” 左侧没有运算对象，是一个不完整的表达式。
 编译器会报如下错误：
 
-> ex1-4.cc: In function ‘int main()’:
-> ex1-4.cc:8:41: error: expected primary-expression before ‘<<’ token
->     8 |   std::cout << "The product of " << v1; << " and " << v2;
->       |                                         ^~
-> ex1-4.cc:9:3: error: expected primary-expression before ‘<<’ token
->     9 |   << " is " << v1 * v2 << std::endl;
->       |   ^~
-
+```
+  ex1-4.cc: In function ‘int main()’:
+  ex1-4.cc:8:41: error: expected primary-expression before ‘<<’ token
+      8 |   std::cout << "The product of " << v1; << " and " << v2;
+        |                                         ^~
+  ex1-4.cc:9:3: error: expected primary-expression before ‘<<’ token
+      9 |   << " is " << v1 * v2 << std::endl;
+        |   ^~
+```
 两种改法：
 1. 去掉中间的分号
 2. 在后面两行的第一个 “<<” 之前补上 std::cout，使表达式完整
+
+        
+		
+
+		
