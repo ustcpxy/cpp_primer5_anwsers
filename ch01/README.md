@@ -83,3 +83,44 @@ int main()
 		
 
 		
+## 练习1.7
+
+```
+ex1-8.cc:4:14: error: extended character 。 is not valid in an identifier
+    4 | * 注释对/* */不能嵌套。
+      |              ^
+ex1-8.cc:4:14: error: ‘不能嵌套。’ does not name a type
+    4 | * 注释对/* */不能嵌套。
+      |              ^~~~~~~~~~
+
+```
+
+## 练习1.8
+    ` std::cout << "/*"; ` 预测合法，实测编译通过。
+    
+	` std::cout << "*/"; ` 预测合法，实测编译通过。
+	
+`    std::cout << /* "*/" */; ` 预测不合法，实测编译不通过。
+>
+```ex1-8.cc:8:24: warning: missing terminating " character
+    8 |     std::cout << /* "*/" */;
+      |                        ^
+ex1-8.cc:8:24: error: missing terminating " character
+    8 |     std::cout << /* "*/" */;
+      |                        ^~~~~
+ex1-8.cc: In function ‘int main()’:
+ex1-8.cc:11:5: error: expected primary-expression before ‘return’
+   11 |     return 0;
+      |     ^~~~~~
+
+
+```
+
+
+`  std::cout << /* "*/" /* "/*" */; ` 预测不合法，实测编译通过。
+
+记住两点：
+1. 以/*开头，中间可以包含任意内容，包括双引号，都视为注释内容一部分，直至遇到 */ 为止
+2. 如果双引号开头，里面的任意字符，包括/* 或 */都作为字符串的一部分，直至遇到匹配的双引号为止
+
+
